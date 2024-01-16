@@ -42,6 +42,25 @@ public class AlmacenController {
         return proveedorList.removeIf(proveedor -> cif.equals(proveedor.getCif()));
     }
 
+    public boolean editarNombreProveedor(String cif, String nombre){
+        /*
+        for (int i = 0; i < proveedorList.size(); i++) {
+            if(cif.equals(proveedorList.get(i).getCif())){
+                proveedorList.get(i).setNombre(nombre);
+                return true;
+            }
+        }
+        return false;
+         */
+        for(Proveedor proveedor : proveedorList){
+            if(cif.equals(proveedor.getCif())){
+                proveedor.setNombre(nombre);
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         return "AlmacenController{" + "\n"+
@@ -50,4 +69,5 @@ public class AlmacenController {
                 ", pedidoList=" + pedidoList + "\n"+
                 '}';
     }
+
 }
