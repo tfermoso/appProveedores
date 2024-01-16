@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Proyecto AppProveedores">
-      <change afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" afterDir="false" />
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Creamos paquete com.ceica y modelo Proveedor">
+      <change afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Pieza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2b2eeWcLbg6uP1cGkq8Pu3IZuaz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,6 +45,18 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ceica.Modelos" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,12 +82,21 @@
       <option name="project" value="LOCAL" />
       <updated>1705418899487</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creamos paquete com.ceica y modelo Proveedor">
+      <option name="closed" value="true" />
+      <created>1705419827274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705419827274</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Proyecto AppProveedores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proyecto AppProveedores" />
+    <MESSAGE value="Creamos paquete com.ceica y modelo Proveedor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creamos paquete com.ceica y modelo Proveedor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
