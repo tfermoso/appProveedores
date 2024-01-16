@@ -72,7 +72,7 @@ public class Proveedor {
                 ", nombre='" + nombre + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", localidad='" + localidad + '\'' +
-                ", provincia='" + provincia + '\'' +
+                ", provincia='" + provincia + '\'' + "\n"+
                 '}';
     }
 }

@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Creamos Categoria,Pedido y Pieza">
-      <change afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" afterDir="false" />
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Creamos AlmacenController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,14 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705421631871</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Creamos AlmacenController">
+      <option name="closed" value="true" />
+      <created>1705422940215</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705422940215</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Proyecto AppProveedores" />
     <MESSAGE value="Creamos paquete com.ceica y modelo Proveedor" />
     <MESSAGE value="Creamos Categoria,Pedido y Pieza" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creamos Categoria,Pedido y Pieza" />
+    <MESSAGE value="Creamos AlmacenController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creamos AlmacenController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
