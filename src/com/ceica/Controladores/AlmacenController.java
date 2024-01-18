@@ -52,6 +52,7 @@ public class AlmacenController {
         }
         return false;
          */
+        /*
         for(Proveedor proveedor : proveedorList){
             if(cif.equals(proveedor.getCif())){
                 proveedor.setNombre(nombre);
@@ -59,7 +60,19 @@ public class AlmacenController {
             }
         }
         return false;
+         */
+        proveedorList.stream()
+                .filter(p->cif.equals(p.getCif()))
+                .findFirst()
+                .map(p -> {
+                    p.setNombre(nombre);
+                    return true;
+                })
+                .orElse(false);
+        return false;
     }
+
+
 
     @Override
     public String toString() {
