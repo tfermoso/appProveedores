@@ -1,10 +1,8 @@
 package com.ceica.Controladores;
 
-import com.ceica.Modelos.Categoria;
-import com.ceica.Modelos.Pedido;
-import com.ceica.Modelos.Pieza;
-import com.ceica.Modelos.Proveedor;
+import com.ceica.Modelos.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,8 +90,8 @@ public class AlmacenController {
                 .orElse(false);
     }
 
-    public boolean nuevaPieza(String nombre,String color,Double precio, int idcategoria){
-            Pieza pieza=new Pieza(nombre,color,precio);
+    public boolean nuevaPieza(String nombre, Color color, Double precio, int idcategoria){
+            Pieza pieza=new Pieza(nombre,color.toString(),precio);
             pieza.setCategoria(getCategoriaById(idcategoria));
             piezaList.add(pieza);
             return true;
@@ -103,6 +101,40 @@ public class AlmacenController {
         return categorias.stream()
                 .filter(c->c.getId()==id).
                 findFirst().get();
+    }
+
+    public String nuevoPedido(String cif,int idPieza,int cantidad){
+        Proveedor proveedor=getProveedorByCIF(cif);
+        if(proveedor!=null){
+           Pieza pieza=getPiezaByID(idPieza);
+           if(pieza!=null){
+               Pedido pedido1 = new Pedido(proveedor,pieza);
+               pedido1.setCantidad(cantidad);
+               pedido1.setFecha(LocalDate.now());
+               pedidoList.add(pedido1);
+               return "Pedido creado";
+           }else{
+               return "Error al crear el pedido, Pieza no existe";
+           }
+        }else{
+            return "Error al crear el pedido, Proveedor no existe";
+        }
+    }
+    private Pieza getPiezaByID(int id){
+        for (int i = 0; i < piezaList.size(); i++) {
+            if(piezaList.get(i).getId()==id){
+                return piezaList.get(i);
+            }
+        }
+        return null;
+    }
+    private Proveedor getProveedorByCIF(String cif){
+        for (Proveedor p:proveedorList){
+            if(cif.equals(p.getCif())){
+                return p;
+            }
+        }
+        return null;
     }
 
     @Override
