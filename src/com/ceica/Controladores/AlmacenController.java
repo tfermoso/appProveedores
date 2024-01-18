@@ -137,6 +137,22 @@ public class AlmacenController {
         return null;
     }
 
+    public String getPedidosByPieza(int idPieza){
+        List<Pedido> pedidosByPieza=new ArrayList<>();
+        for (Pedido pedido : pedidoList){
+            if(pedido.getPieza().getId()==idPieza){
+                pedidosByPieza.add(pedido);
+            }
+        }
+        if(pedidosByPieza.size()>0){
+            return pedidosByPieza.toString();
+        }else{
+            return "No hay pedidos de esta pieza";
+        }
+    }
+    public String getPedidosByProveedor(String cif){
+        return "";
+    }
     @Override
     public String toString() {
         return "AlmacenController{" + "\n"+

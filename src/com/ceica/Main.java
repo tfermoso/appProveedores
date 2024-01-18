@@ -12,6 +12,8 @@ public class Main {
         almacen.nuevaPieza("piezaB", Color.NEGRO,5.5,2);
         System.out.println(almacen.toString());
         almacen.editarPrecioPieza(1,65.4);
+        System.out.println(almacen.nuevoPedido("a",1,50));
+        System.out.println(almacen.nuevoPedido("a",1,10));
         System.out.println(almacen.toString());
 
     }
