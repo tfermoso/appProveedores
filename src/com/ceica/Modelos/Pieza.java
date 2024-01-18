@@ -1,6 +1,7 @@
 package com.ceica.Modelos;
 
 public class Pieza {
+    private static int idPieza=0;
     private int id;
     private String nombre;
     private String color;
@@ -8,6 +9,7 @@ public class Pieza {
     private Categoria categoria;
 
     public Pieza(String nombre, String color, Double precio) {
+        this.id=idPieza++;
         this.nombre = nombre;
         this.color = color;
         this.precio = precio;
@@ -51,5 +53,16 @@ public class Pieza {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Pieza{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", color='" + color + '\'' +
+                ", precio=" + precio +
+                ", categoria=" + categoria +
+                '}';
     }
 }
