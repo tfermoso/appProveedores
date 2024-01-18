@@ -57,12 +57,13 @@ public class Pieza {
 
     @Override
     public String toString() {
-        return "Pieza{" +
+        return "Pieza\n" +
+                "{" +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", color='" + color + '\'' +
                 ", precio=" + precio +
                 ", categoria=" + categoria +
-                '}';
+                '}'+"\n";
     }
 }

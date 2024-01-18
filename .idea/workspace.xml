@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Metodo editar Nombre proveedor con Stream">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" afterDir="false" />
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Metodo para crear piezas y para editar su precio">
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Pieza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Pieza.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705590214582</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Metodo para crear piezas y para editar su precio">
+      <option name="closed" value="true" />
+      <created>1705594956922</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705594956922</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,7 +165,8 @@
     <MESSAGE value="Metodo borrarProveedor con funciones lambda" />
     <MESSAGE value="Metodo editar Nombre proveedor" />
     <MESSAGE value="Metodo editar Nombre proveedor con Stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="Metodo editar Nombre proveedor con Stream" />
+    <MESSAGE value="Metodo para crear piezas y para editar su precio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Metodo para crear piezas y para editar su precio" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
