@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Empezando con la interfaz ee consola">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" afterDir="false" />
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Submenú proveedores">
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705678322025</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Submenú proveedores">
+      <option name="closed" value="true" />
+      <created>1705680191839</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1705680191839</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -213,7 +219,8 @@
     <MESSAGE value="Metodo buscar pedidos por pieza" />
     <MESSAGE value="Método para buscar pedidos por proveedor" />
     <MESSAGE value="Empezando con la interfaz ee consola" />
-    <option name="LAST_COMMIT_MESSAGE" value="Empezando con la interfaz ee consola" />
+    <MESSAGE value="Submenú proveedores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Submenú proveedores" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

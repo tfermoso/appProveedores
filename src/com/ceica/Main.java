@@ -60,7 +60,7 @@ public class Main {
     }
 
     private static void subMenuProveedores(Scanner leer, AlmacenController almacen) {
-        String op;
+        String op,cif,nombre;
         String menuProveedores= """
                 1. Nuevo proveedor
                 2. Editar proveedor
@@ -73,6 +73,9 @@ public class Main {
             op=leer.nextLine();
             switch (op){
                 case "1":
+                    System.out.print("CIF: ");
+                    cif=leer.nextLine();
+
 
                     break;
                 case "2":
