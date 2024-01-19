@@ -221,6 +221,10 @@ public class AlmacenController {
                 .map(Object::toString)
                 .orElse("No hay pedidos de ese proveedor");
     }
+
+    public String verProveedores() {
+        return proveedorList.toString();
+    }
     @Override
     public String toString() {
         return "AlmacenController{" + "\n"+
@@ -230,5 +234,6 @@ public class AlmacenController {
                 + pedidoList + "\n"+
                 '}';
     }
+
 
 }
