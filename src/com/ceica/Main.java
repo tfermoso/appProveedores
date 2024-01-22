@@ -6,6 +6,7 @@ import com.ceica.Modelos.Color;
 
 import javax.script.ScriptContext;
 import java.util.Arrays;
+import java.util.MissingFormatArgumentException;
 import java.util.Scanner;
 
 public class Main {
@@ -68,7 +69,7 @@ public class Main {
                 2. Cambiar precio
                 3. Borrar pieza
                 4. Ver piezas
-                5. Volver al menú anterio
+                5. Volver al menú anterior
                 """;
         do{
             System.out.println(menuPiezas);
@@ -93,27 +94,46 @@ public class Main {
     }
 
     private static void nuevaPieza(Scanner leer, AlmacenController almacen) {
-    String nombre,colorPieza;
-    double precio;
-    Color color = null;
-    boolean colorValido=false;
-    int categoria;
+        String nombre, colorPieza;
+        double precio;
+        Color color = null;
+        boolean colorValido = false,categoriaValida=false,precioValido=false;
+        int categoria;
         System.out.print("Nombre de la pieza: ");
-        nombre=leer.nextLine();
-        System.out.print("Precio: ");
-        precio=leer.nextDouble();
+        nombre = leer.nextLine();
+        do {
+            System.out.print("Precio: ");
+            try {
+                precio = leer.nextDouble();
+                leer.nextLine();
+                precioValido=true;
+            }catch (Exception e){
+                leer.nextLine();
+                System.out.println("Formato de precio no válido");
+                precioValido=false;
+            }
+        }while(! precioValido);
         do {
             System.out.println("Color de la pieza (Colores disponibles)");
-            System.out.println(Arrays.stream(Color.values()).toList().toString());
+            System.out.println(Arrays.stream(Color.values()).toList());
             colorPieza = leer.nextLine();
             try {
-                color = Color.valueOf(colorPieza);
-                colorValido=true;
-            }catch (Exception e){
-                colorValido=false;
+                color = Color.valueOf(colorPieza.toUpperCase());
+                colorValido = true;
+            } catch (Exception e) {
+                colorValido = false;
             }
-        }while (! colorValido);
-        System.out.println(color);
+        } while (!colorValido);
+        do {
+            System.out.println(almacen.categoriasDisponibles());
+            categoria=leer.nextInt();
+            leer.nextLine();
+            if(almacen.categoriaValida(categoria)){
+                categoriaValida=true;
+            }else{
+                System.out.println("Categoría no válida");
+            }
+        }while (!categoriaValida);
     }
 
     private static void subMenuProveedores(Scanner leer, AlmacenController almacen) {

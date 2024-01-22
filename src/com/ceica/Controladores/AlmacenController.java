@@ -236,4 +236,16 @@ public class AlmacenController {
     }
 
 
+    public String categoriasDisponibles() {
+        return categorias.toString();
+    }
+
+    public boolean categoriaValida(int categoria) {
+        for (Categoria cat : categorias){
+            if(cat.getId()==categoria){
+                return true;
+            }
+        }
+        return false;
+    }
 }
