@@ -248,4 +248,8 @@ public class AlmacenController {
         }
         return false;
     }
+
+    public String verPiezas() {
+        return piezaList.toString();
+    }
 }

@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Creando piezas...">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Validando precio, color y categoría">
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705693319888</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Validando precio, color y categoría">
+      <option name="closed" value="true" />
+      <created>1705938683144</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1705938683144</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -260,7 +266,8 @@
     <MESSAGE value="Ver proveedores" />
     <MESSAGE value="Menu proveedores" />
     <MESSAGE value="Creando piezas..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creando piezas..." />
+    <MESSAGE value="Validando precio, color y categoría" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validando precio, color y categoría" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

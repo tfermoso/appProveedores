@@ -83,6 +83,7 @@ public class Main {
                 case "3":
                     break;
                 case "4":
+                    System.out.println(almacen.verPiezas());
                     break;
                 case "5":
                     break;
@@ -95,7 +96,7 @@ public class Main {
 
     private static void nuevaPieza(Scanner leer, AlmacenController almacen) {
         String nombre, colorPieza;
-        double precio;
+        double precio = 0;
         Color color = null;
         boolean colorValido = false,categoriaValida=false,precioValido=false;
         int categoria;
@@ -134,6 +135,7 @@ public class Main {
                 System.out.println("Categoría no válida");
             }
         }while (!categoriaValida);
+        almacen.nuevaPieza(nombre,color,precio,categoria);
     }
 
     private static void subMenuProveedores(Scanner leer, AlmacenController almacen) {
