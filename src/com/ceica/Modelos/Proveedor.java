@@ -91,6 +91,10 @@ public class Proveedor {
         this.provincia = provincia;
     }
 
+    public boolean editarNombreProveedor(String cif, String nombre){
+
+    }
+
     public static List<Proveedor> getProveedores()  {
         List<Proveedor> proveedorList=new ArrayList<>();
         Connection conn= Conexion.conectar();
