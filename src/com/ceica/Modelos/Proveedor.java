@@ -25,6 +25,10 @@ public class Proveedor {
         this.nombre = nombre;
     }
 
+    public static boolean insertar(Proveedor proveedor) {
+
+    }
+
     public int getId() {
         return id;
     }
@@ -92,10 +96,17 @@ public class Proveedor {
 
         } catch (SQLException e) {
             //throw new RuntimeException(e);
+
             return proveedorList;
+        }
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            //throw new RuntimeException(e);
         }
         return proveedorList;
     }
+
 
     @Override
     public String toString() {

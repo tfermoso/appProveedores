@@ -45,7 +45,12 @@ public class AlmacenController {
         proveedor.setDireccion(direccion);
         proveedor.setLocalidad(localidad);
         proveedor.setProvincia(provincia);
-        return proveedorList.add(proveedor);
+        if(Proveedor.insertar(proveedor)){
+            return proveedorList.add(proveedor);
+        }else{
+            return false;
+        }
+
     }
     /*
     public boolean borrarProveedor(String cif){
