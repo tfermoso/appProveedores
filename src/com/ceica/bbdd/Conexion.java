@@ -22,7 +22,7 @@ public class Conexion {
         } catch (Exception e) {
             url = "jdbc:mysql://localhost:3306/proveedores";
             usuario = "root";
-            password = "1234";
+            password = "123o4";
 
         }
 

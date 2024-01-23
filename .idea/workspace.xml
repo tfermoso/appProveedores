@@ -9,14 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="leyendo fichero de configuracion">
-      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" afterDir="false" />
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="obtenemos proveedores de la bbdd">
       <change beforePath="$PROJECT_DIR$/src/com/ceica/bbdd/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/bbdd/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/bbdd/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/bbdd/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/bbdd/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/config.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706023128851</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="obtenemos proveedores de la bbdd">
+      <option name="closed" value="true" />
+      <created>1706026165068</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1706026165068</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -301,7 +305,8 @@
     <MESSAGE value="Validando precio, color y categoría" />
     <MESSAGE value="Guardando nueva pieza" />
     <MESSAGE value="leyendo fichero de configuracion" />
-    <option name="LAST_COMMIT_MESSAGE" value="leyendo fichero de configuracion" />
+    <MESSAGE value="obtenemos proveedores de la bbdd" />
+    <option name="LAST_COMMIT_MESSAGE" value="obtenemos proveedores de la bbdd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
