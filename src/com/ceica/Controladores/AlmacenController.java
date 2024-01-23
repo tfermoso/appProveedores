@@ -22,6 +22,7 @@ public class AlmacenController {
         pedidoList=new ArrayList<>();
         piezaList=new ArrayList<>();
         categorias=new ArrayList<>();
+        proveedorList=Proveedor.getProveedores();
         Categoria categoria=new Categoria(1,"pequeño");
         categorias.add(categoria);
         categorias.add(new Categoria(2,"mediano"));
