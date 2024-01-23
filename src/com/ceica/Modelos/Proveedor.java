@@ -2,10 +2,7 @@ package com.ceica.Modelos;
 
 import com.ceica.bbdd.Conexion;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +23,23 @@ public class Proveedor {
     }
 
     public static boolean insertar(Proveedor proveedor) {
-
+        Connection conn=Conexion.conectar();
+        String sql="insert into proveedores (nombre,direccion,localidad,provincia)" +
+                " values (?,?,?,?)";
+        try {
+            PreparedStatement pst=conn.prepareStatement(sql);
+            pst.setString(1,proveedor.getNombre());
+            pst.setString(2, proveedor.getDireccion());
+            pst.setString(3,proveedor.getLocalidad());
+            pst.setString(4,proveedor.getProvincia());
+            if(pst.executeUpdate()<0){
+                return false;
+            }else{
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public int getId() {

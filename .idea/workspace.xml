@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="obtenemos proveedores de la bbdd">
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/bbdd/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/bbdd/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/bbdd/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/config.properties" beforeDir="false" />
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Cerramos conexion en getProveedores">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +279,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706026165068</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Fichero de configuracion movido">
+      <option name="closed" value="true" />
+      <created>1706026653965</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1706026653965</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Cerramos conexion en getProveedores">
+      <option name="closed" value="true" />
+      <created>1706030942003</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1706030942003</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -306,7 +321,9 @@
     <MESSAGE value="Guardando nueva pieza" />
     <MESSAGE value="leyendo fichero de configuracion" />
     <MESSAGE value="obtenemos proveedores de la bbdd" />
-    <option name="LAST_COMMIT_MESSAGE" value="obtenemos proveedores de la bbdd" />
+    <MESSAGE value="Fichero de configuracion movido" />
+    <MESSAGE value="Cerramos conexion en getProveedores" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cerramos conexion en getProveedores" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
