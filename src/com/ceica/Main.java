@@ -184,13 +184,18 @@ public class Main {
                         System.out.println("No existe ningún proveedor con ese CIF");
                     }
 
-
-
                     break;
                 case "3":
                     System.out.println(almacen.verProveedores());
                     break;
                 case "4":
+                    System.out.print("Proveedor a eliminar, CIF: ");
+                    cif=leer.nextLine();
+                    if(almacen.borrarProveedor(cif)){
+                        System.out.println("Proveedor eliminado...");
+                    }else{
+                        System.out.println("No se ha podido eliminar el proveedor");
+                    }
                     break;
                 case "5":
                     System.out.println("Volviendo al menú principal...");

@@ -67,7 +67,16 @@ public class AlmacenController {
 
      */
     public boolean borrarProveedor(String cif) {
+        /*
         return proveedorList.removeIf(proveedor -> cif.equals(proveedor.getCif()));
+        */
+        if(Proveedor.eliminarProveedor(cif)){
+            proveedorList=Proveedor.getProveedores();
+            return true;
+        }else{
+            return false;
+        }
+
     }
 
     /**

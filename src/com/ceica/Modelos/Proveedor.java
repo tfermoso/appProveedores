@@ -43,6 +43,26 @@ public class Proveedor {
         }
     }
 
+    public static boolean eliminarProveedor(String cif) {
+        Connection conn=Conexion.conectar();
+        String sql="delete from proveedores where cif=?";
+        try {
+            PreparedStatement pst=conn.prepareStatement(sql);
+            pst.setString(1,cif);
+            if(pst.executeUpdate()>0){
+                conn.close();
+                return true;
+            }else{
+                conn.close();
+                return false;
+            }
+        } catch (SQLException e) {
+            //throw new RuntimeException(e);
+            return false;
+        }
+
+    }
+
     public int getId() {
         return id;
     }
@@ -99,8 +119,10 @@ public class Proveedor {
             pst.setString(1,nombre);
             pst.setString(2,cif);
             if(pst.executeUpdate()>0){
+                conn.close();
                 return true;
             }else{
+                conn.close();
                 return false;
             }
         } catch (SQLException e) {
