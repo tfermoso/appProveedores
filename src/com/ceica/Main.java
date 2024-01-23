@@ -170,6 +170,21 @@ public class Main {
                     almacen.nuevoProveedor(cif,nombre,direccion,localidad,provincia);
                     break;
                 case "2":
+                    System.out.print("Proveedor a editar, CIF: ");
+                    cif=leer.nextLine();
+                    if(almacen.getProveedorByCif(cif)){
+                        System.out.print("Nuevo Nombre: ");
+                        nombre= leer.nextLine();
+                        if(almacen.editarNombreProveedor(cif,nombre)){
+                            System.out.println("Proveedor Editado");
+                        }else {
+                            System.out.println("Error editando el proveedor");
+                        }
+                    }else{
+                        System.out.println("No existe ningún proveedor con ese CIF");
+                    }
+
+
 
                     break;
                 case "3":
