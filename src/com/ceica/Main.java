@@ -79,6 +79,7 @@ public class Main {
                     nuevaPieza(leer,almacen);
                     break;
                 case "2":
+                    editarPieza(leer,almacen);
                     break;
                 case "3":
                     break;
@@ -92,6 +93,10 @@ public class Main {
             }
 
         }while(! "5".equals(op));
+    }
+
+    private static void editarPieza(Scanner leer, AlmacenController almacen) {
+
     }
 
     private static void nuevaPieza(Scanner leer, AlmacenController almacen) {
@@ -139,7 +144,7 @@ public class Main {
     }
 
     private static void subMenuProveedores(Scanner leer, AlmacenController almacen) {
-        String op,cif,nombre;
+        String op,cif,nombre,direccion,localidad,provincia;
         String menuProveedores= """
                 1. Nuevo proveedor
                 2. Editar proveedor
@@ -154,8 +159,15 @@ public class Main {
                 case "1":
                     System.out.print("CIF: ");
                     cif=leer.nextLine();
-
-
+                    System.out.print("Nombre: ");
+                    nombre= leer.nextLine();
+                    System.out.print("Direccion: ");
+                    direccion=leer.nextLine();
+                    System.out.print("Localidad: ");
+                    localidad=leer.nextLine();
+                    System.out.print("Provincia: ");
+                    provincia=leer.nextLine();
+                    almacen.nuevoProveedor(cif,nombre,direccion,localidad,provincia);
                     break;
                 case "2":
 
