@@ -24,14 +24,15 @@ public class Proveedor {
 
     public static boolean insertar(Proveedor proveedor) {
         Connection conn=Conexion.conectar();
-        String sql="insert into proveedores (nombre,direccion,localidad,provincia)" +
-                " values (?,?,?,?)";
+        String sql="insert into proveedores (nombre,direccion,localidad,provincia,cif)" +
+                " values (?,?,?,?,?)";
         try {
             PreparedStatement pst=conn.prepareStatement(sql);
             pst.setString(1,proveedor.getNombre());
             pst.setString(2, proveedor.getDireccion());
             pst.setString(3,proveedor.getLocalidad());
             pst.setString(4,proveedor.getProvincia());
+            pst.setString(5,proveedor.getCif());
             if(pst.executeUpdate()<0){
                 return false;
             }else{
@@ -100,6 +101,7 @@ public class Proveedor {
             while (respuesta.next()){
                Proveedor proveedor=new Proveedor();
                proveedor.setId(respuesta.getInt("idProveedor"));
+               proveedor.setCif(respuesta.getString("cif"));
                proveedor.setNombre(respuesta.getString("nombre"));
                proveedor.setDireccion(respuesta.getString("direccion"));
                proveedor.setLocalidad(respuesta.getString("localidad"));
@@ -119,6 +121,8 @@ public class Proveedor {
         }
         return proveedorList;
     }
+
+
 
 
     @Override

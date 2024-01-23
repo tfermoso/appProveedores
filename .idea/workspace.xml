@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Cerramos conexion en getProveedores">
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="metodo insertar Proveedor en bbdd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" afterDir="false" />
     </list>
@@ -295,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706030942003</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="metodo insertar Proveedor en bbdd">
+      <option name="closed" value="true" />
+      <created>1706031673027</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1706031673027</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -323,7 +331,8 @@
     <MESSAGE value="obtenemos proveedores de la bbdd" />
     <MESSAGE value="Fichero de configuracion movido" />
     <MESSAGE value="Cerramos conexion en getProveedores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cerramos conexion en getProveedores" />
+    <MESSAGE value="metodo insertar Proveedor en bbdd" />
+    <option name="LAST_COMMIT_MESSAGE" value="metodo insertar Proveedor en bbdd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
