@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Editando el nombre del proveedor">
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Eliminar proveedor">
+      <change afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -337,11 +337,18 @@
       <option name="project" value="LOCAL" />
       <updated>1706036731736</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Eliminar proveedor">
+      <option name="closed" value="true" />
+      <created>1706038702472</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1706038702472</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creamos AlmacenController" />
     <MESSAGE value="Borrar Proveedor" />
     <MESSAGE value="Metodo borrarProveedor con funciones lambda" />
     <MESSAGE value="Metodo editar Nombre proveedor" />
@@ -366,7 +373,8 @@
     <MESSAGE value="añadimos cif del proveedor" />
     <MESSAGE value="editar nombre proveedor" />
     <MESSAGE value="Editando el nombre del proveedor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Editando el nombre del proveedor" />
+    <MESSAGE value="Eliminar proveedor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eliminar proveedor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

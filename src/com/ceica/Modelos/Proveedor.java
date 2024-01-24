@@ -22,46 +22,6 @@ public class Proveedor {
         this.nombre = nombre;
     }
 
-    public static boolean insertar(Proveedor proveedor) {
-        Connection conn=Conexion.conectar();
-        String sql="insert into proveedores (nombre,direccion,localidad,provincia,cif)" +
-                " values (?,?,?,?,?)";
-        try {
-            PreparedStatement pst=conn.prepareStatement(sql);
-            pst.setString(1,proveedor.getNombre());
-            pst.setString(2, proveedor.getDireccion());
-            pst.setString(3,proveedor.getLocalidad());
-            pst.setString(4,proveedor.getProvincia());
-            pst.setString(5,proveedor.getCif());
-            if(pst.executeUpdate()<0){
-                return false;
-            }else{
-                return true;
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static boolean eliminarProveedor(String cif) {
-        Connection conn=Conexion.conectar();
-        String sql="delete from proveedores where cif=?";
-        try {
-            PreparedStatement pst=conn.prepareStatement(sql);
-            pst.setString(1,cif);
-            if(pst.executeUpdate()>0){
-                conn.close();
-                return true;
-            }else{
-                conn.close();
-                return false;
-            }
-        } catch (SQLException e) {
-            //throw new RuntimeException(e);
-            return false;
-        }
-
-    }
 
     public int getId() {
         return id;
@@ -111,17 +71,37 @@ public class Proveedor {
         this.provincia = provincia;
     }
 
-    public static boolean editarNombreProveedor(String cif, String nombre){
-        Connection conn=Conexion.conectar();
-        String sql="update proveedores set nombre = ? where cif = ?";
+    public static boolean insertar(Proveedor proveedor) {
+        Connection conn = Conexion.conectar();
+        String sql = "insert into proveedores (nombre,direccion,localidad,provincia,cif)" +
+                " values (?,?,?,?,?)";
         try {
-            PreparedStatement pst=conn.prepareStatement(sql);
-            pst.setString(1,nombre);
-            pst.setString(2,cif);
-            if(pst.executeUpdate()>0){
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, proveedor.getNombre());
+            pst.setString(2, proveedor.getDireccion());
+            pst.setString(3, proveedor.getLocalidad());
+            pst.setString(4, proveedor.getProvincia());
+            pst.setString(5, proveedor.getCif());
+            if (pst.executeUpdate() < 0) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public static boolean eliminarProveedor(String cif) {
+        Connection conn = Conexion.conectar();
+        String sql = "delete from proveedores where cif=?";
+        try {
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, cif);
+            if (pst.executeUpdate() > 0) {
                 conn.close();
                 return true;
-            }else{
+            } else {
                 conn.close();
                 return false;
             }
@@ -132,22 +112,43 @@ public class Proveedor {
 
     }
 
-    public static List<Proveedor> getProveedores()  {
-        List<Proveedor> proveedorList=new ArrayList<>();
-        Connection conn= Conexion.conectar();
-        String sql="select * from proveedores";
+    public static boolean editarNombreProveedor(String cif, String nombre) {
+        Connection conn = Conexion.conectar();
+        String sql = "update proveedores set nombre = ? where cif = ?";
         try {
-            Statement stm=conn.createStatement();
+            PreparedStatement pst = conn.prepareStatement(sql);
+            pst.setString(1, nombre);
+            pst.setString(2, cif);
+            if (pst.executeUpdate() > 0) {
+                conn.close();
+                return true;
+            } else {
+                conn.close();
+                return false;
+            }
+        } catch (SQLException e) {
+            //throw new RuntimeException(e);
+            return false;
+        }
+
+    }
+
+    public static List<Proveedor> getProveedores() {
+        List<Proveedor> proveedorList = new ArrayList<>();
+        Connection conn = Conexion.conectar();
+        String sql = "select * from proveedores";
+        try {
+            Statement stm = conn.createStatement();
             ResultSet respuesta = stm.executeQuery(sql);
-            while (respuesta.next()){
-               Proveedor proveedor=new Proveedor();
-               proveedor.setId(respuesta.getInt("idProveedor"));
-               proveedor.setCif(respuesta.getString("cif"));
-               proveedor.setNombre(respuesta.getString("nombre"));
-               proveedor.setDireccion(respuesta.getString("direccion"));
-               proveedor.setLocalidad(respuesta.getString("localidad"));
-               proveedor.setProvincia(respuesta.getString("provincia"));
-               proveedorList.add(proveedor);
+            while (respuesta.next()) {
+                Proveedor proveedor = new Proveedor();
+                proveedor.setId(respuesta.getInt("idProveedor"));
+                proveedor.setCif(respuesta.getString("cif"));
+                proveedor.setNombre(respuesta.getString("nombre"));
+                proveedor.setDireccion(respuesta.getString("direccion"));
+                proveedor.setLocalidad(respuesta.getString("localidad"));
+                proveedor.setProvincia(respuesta.getString("provincia"));
+                proveedorList.add(proveedor);
             }
 
         } catch (SQLException e) {
@@ -164,8 +165,6 @@ public class Proveedor {
     }
 
 
-
-
     @Override
     public String toString() {
         return "Proveedor{" +
@@ -174,7 +173,7 @@ public class Proveedor {
                 ", nombre='" + nombre + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", localidad='" + localidad + '\'' +
-                ", provincia='" + provincia + '\'' + "\n"+
+                ", provincia='" + provincia + '\'' + "\n" +
                 '}';
     }
 }
