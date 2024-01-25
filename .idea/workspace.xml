@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Proveedor extiende de ModeloBase">
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="Proveedor extiende de ModeloBase probando actualizar nombre">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/ModeloBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/ModeloBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Pieza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Pieza.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Categoria.executor": "Run",
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -412,11 +412,18 @@
       <option name="project" value="LOCAL" />
       <updated>1706207377419</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Proveedor extiende de ModeloBase probando actualizar nombre">
+      <option name="closed" value="true" />
+      <created>1706208848352</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1706208848352</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Metodo para crear piezas y para editar su precio" />
     <MESSAGE value="probando metodos de editar piezas" />
     <MESSAGE value="Metodo crear pedido" />
     <MESSAGE value="Metodo buscar pedidos por pieza" />
@@ -441,7 +448,8 @@
     <MESSAGE value="ModeloBase" />
     <MESSAGE value="ModeloBase getAll" />
     <MESSAGE value="Proveedor extiende de ModeloBase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Proveedor extiende de ModeloBase" />
+    <MESSAGE value="Proveedor extiende de ModeloBase probando actualizar nombre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proveedor extiende de ModeloBase probando actualizar nombre" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -460,6 +468,11 @@
           <url>file://$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java</url>
           <line>106</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,6 +1,9 @@
 package com.ceica.Modelos;
 
-public class Pieza {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Pieza extends ModeloBase {
     private static int idPieza=0;
     private int id;
     private String nombre;
@@ -65,5 +68,15 @@ public class Pieza {
                 ", precio=" + precio +
                 ", categoria=" + categoria +
                 '}'+"\n";
+    }
+
+    @Override
+    protected String getNombreTabla() {
+        return "piezas";
+    }
+
+    @Override
+    protected Object createObjectFromResultSet(ResultSet resultSet) throws SQLException {
+        return null;
     }
 }

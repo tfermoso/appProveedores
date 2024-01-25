@@ -139,8 +139,12 @@ public class AlmacenController {
     public boolean nuevaPieza(String nombre, Color color, Double precio, int idcategoria) {
         Pieza pieza = new Pieza(nombre, color.toString(), precio);
         pieza.setCategoria(getCategoriaById(idcategoria));
-        piezaList.add(pieza);
-        return true;
+        if(pieza.insertar("(nombre,color,precio,idcategoria) values (?,?,?,?)",nombre,color.toString(),precio,idcategoria)){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 
     /**

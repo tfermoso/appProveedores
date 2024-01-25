@@ -140,6 +140,7 @@ public class Main {
                 System.out.println("Categoría no válida");
             }
         }while (!categoriaValida);
+
         almacen.nuevaPieza(nombre,color,precio,categoria);
     }
 
