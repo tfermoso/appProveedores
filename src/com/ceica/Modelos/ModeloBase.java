@@ -1,10 +1,12 @@
+package com.ceica.Modelos;
+
+import java.lang.reflect.Method;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public abstract class ModeloBase {
@@ -12,6 +14,7 @@ public abstract class ModeloBase {
     protected static String URL;
     protected static String USUARIO;
     protected static String PASSWORD;
+
 
     static {
         cargarConfiguracion();
@@ -23,7 +26,7 @@ public abstract class ModeloBase {
             propiedades.load(entrada);
             URL = propiedades.getProperty("db.url");
             USUARIO = propiedades.getProperty("db.usuario");
-            PASSWORD = propiedades.getProperty("db.contraseña");
+            PASSWORD = propiedades.getProperty("db.password");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -35,20 +38,19 @@ public abstract class ModeloBase {
     // Métodos para CRUD
 
     protected void insertar(String sql, Object... parametros) {
+
+        sql = "insert into " + getNombreTabla() + " " + sql;
         ejecutarQuery(sql, parametros);
     }
 
     protected void actualizar(String sql, Object... parametros) {
+        sql = "update " + getNombreTabla() + " " + sql;
         ejecutarQuery(sql, parametros);
     }
 
     protected void borrar(String sql, Object... parametros) {
+        sql = "delete from " + getNombreTabla() + " where " + sql;
         ejecutarQuery(sql, parametros);
-    }
-
-    // Método para leer datos de la base de datos
-    protected void leer(String sql, Object... parametros) {
-        // Implementa la lógica para leer datos
     }
 
     // Método genérico para ejecutar consultas SQL
@@ -68,5 +70,31 @@ public abstract class ModeloBase {
             e.printStackTrace();
         }
     }
+
+    protected abstract Object createObjectFromResultSet(ResultSet resultSet) throws SQLException;
+
+    protected List<Object> leerTodos() {
+        List<Object> resultList = new ArrayList<>();
+
+        String sql = "SELECT * FROM " + getNombreTabla();
+
+        try (Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
+             PreparedStatement preparedStatement = conexion.prepareStatement(sql);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+
+            while (resultSet.next()) {
+                Object obj = createObjectFromResultSet(resultSet);
+                resultList.add(obj);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return resultList;
+    }
+
+
+
 }
 
