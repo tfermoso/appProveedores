@@ -48,6 +48,7 @@ public class Categoria extends ModeloBase {
     @Override
     protected Object createObjectFromResultSet(ResultSet resultSet) throws SQLException {
         Categoria categoria = new Categoria();
+
         categoria.setId(resultSet.getInt("idcategoria"));
         categoria.setNombre(resultSet.getString("categoria"));
         return categoria;

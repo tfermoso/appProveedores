@@ -37,10 +37,11 @@ public abstract class ModeloBase {
 
     // Métodos para CRUD
 
-    protected void insertar(String sql, Object... parametros) {
+    public boolean insertar(String sql, Object... parametros) {
 
         sql = "insert into " + getNombreTabla() + " " + sql;
-        ejecutarQuery(sql, parametros);
+        return ejecutarQuery(sql, parametros);
+
     }
 
     protected void actualizar(String sql, Object... parametros) {
@@ -48,13 +49,13 @@ public abstract class ModeloBase {
         ejecutarQuery(sql, parametros);
     }
 
-    protected void borrar(String sql, Object... parametros) {
+    public boolean borrar(String sql, Object... parametros) {
         sql = "delete from " + getNombreTabla() + " where " + sql;
-        ejecutarQuery(sql, parametros);
+        return ejecutarQuery(sql, parametros);
     }
 
     // Método genérico para ejecutar consultas SQL
-    private void ejecutarQuery(String sql, Object... parametros) {
+    private boolean ejecutarQuery(String sql, Object... parametros) {
         try (Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
              PreparedStatement preparedStatement = conexion.prepareStatement(sql)) {
 
@@ -64,10 +65,15 @@ public abstract class ModeloBase {
             }
 
             // Ejecutar la consulta
-            preparedStatement.executeUpdate();
+            if(preparedStatement.executeUpdate()>0){
+                return true;
+            }else {
+                return false;
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
+            return false;
         }
     }
 

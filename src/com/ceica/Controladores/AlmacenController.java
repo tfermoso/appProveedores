@@ -42,10 +42,8 @@ public class AlmacenController {
      */
     public boolean nuevoProveedor(String cif, String nombre, String direccion, String localidad, String provincia) {
         Proveedor proveedor = new Proveedor(cif, nombre);
-        proveedor.setDireccion(direccion);
-        proveedor.setLocalidad(localidad);
-        proveedor.setProvincia(provincia);
-        if (Proveedor.insertar(proveedor)) {
+        if (proveedor.insertar("(cif,nombre,direccion,localidad,provincia)" +
+                " values (?,?,?,?,?)",cif,nombre,direccion,localidad,provincia)) {
             return proveedorList.add(proveedor);
         } else {
             return false;
@@ -70,7 +68,8 @@ public class AlmacenController {
         /*
         return proveedorList.removeIf(proveedor -> cif.equals(proveedor.getCif()));
         */
-        if(Proveedor.eliminarProveedor(cif)){
+        Proveedor proveedor=new Proveedor();
+        if(proveedor.borrar("cif=?",cif)){
             proveedorList=Proveedor.getProveedores();
             return true;
         }else{

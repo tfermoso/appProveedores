@@ -9,11 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="ModeloBase">
-      <change afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/datos" afterDir="false" />
+    <list default="true" id="2c2c64fc-08f9-4ea0-b273-5bea6494869a" name="Changes" comment="ModeloBase getAll">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/ModeloBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/ModeloBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,7 @@
       <recent name="C:\Users\Tomas\IdeaProjects\appProveedores\src\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Categoria" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ceica.Modelos.Categoria" />
       <module name="appProveedores" />
@@ -88,8 +89,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ceica.Main" />
+      <module name="appProveedores" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ceica.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Categoria" />
       </list>
     </recent_temporary>
@@ -382,11 +397,18 @@
       <option name="project" value="LOCAL" />
       <updated>1706118850948</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ModeloBase getAll">
+      <option name="closed" value="true" />
+      <created>1706203970228</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1706203970228</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Metodo editar Nombre proveedor" />
     <MESSAGE value="Metodo editar Nombre proveedor con Stream" />
     <MESSAGE value="Metodo para crear piezas y para editar su precio" />
     <MESSAGE value="probando metodos de editar piezas" />
@@ -411,7 +433,8 @@
     <MESSAGE value="Eliminar proveedor" />
     <MESSAGE value="Login contra la bbdd" />
     <MESSAGE value="ModeloBase" />
-    <option name="LAST_COMMIT_MESSAGE" value="ModeloBase" />
+    <MESSAGE value="ModeloBase getAll" />
+    <option name="LAST_COMMIT_MESSAGE" value="ModeloBase getAll" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -423,7 +446,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java</url>
-          <line>58</line>
+          <line>59</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
