@@ -23,6 +23,8 @@ public class Proveedor extends ModeloBase {
     }
 
 
+
+
     public int getId() {
         return id;
     }
@@ -93,6 +95,7 @@ public class Proveedor extends ModeloBase {
 
     }
 */
+    /*
     public static boolean editarNombreProveedor(String cif, String nombre) {
         Connection conn = Conexion.conectar();
         String sql = "update proveedores set nombre = ? where cif = ?";
@@ -113,6 +116,7 @@ public class Proveedor extends ModeloBase {
         }
 
     }
+*/
 
     public static List<Proveedor> getProveedores() {
         List<Proveedor> proveedorList = new ArrayList<>();

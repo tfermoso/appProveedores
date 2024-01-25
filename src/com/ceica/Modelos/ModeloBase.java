@@ -44,9 +44,9 @@ public abstract class ModeloBase {
 
     }
 
-    protected void actualizar(String sql, Object... parametros) {
-        sql = "update " + getNombreTabla() + " " + sql;
-        ejecutarQuery(sql, parametros);
+    public boolean actualizar(String sql, Object... parametros) {
+        sql = "update " + getNombreTabla() + " set " + sql;
+        return ejecutarQuery(sql, parametros);
     }
 
     public boolean borrar(String sql, Object... parametros) {

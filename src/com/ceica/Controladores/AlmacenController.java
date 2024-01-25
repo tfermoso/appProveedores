@@ -103,21 +103,10 @@ public class AlmacenController {
         return false;
          */
 
-
-        if (Proveedor.editarNombreProveedor(cif, nombre)) {
+        Proveedor proveedor=new Proveedor();
+        if (proveedor.actualizar("nombre=? where cif=?",nombre,cif)) {
             proveedorList=Proveedor.getProveedores();
             return true;
-           /*
-            return proveedorList.stream()
-                    .filter(p -> cif.equals(p.getCif()))
-                    .findFirst()
-                    .map(p -> {
-                        p.setNombre(nombre);
-                        return true;
-                    })
-                    .orElse(false);
-            */
-
         } else {
             return false;
         }
